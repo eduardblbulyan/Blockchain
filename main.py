@@ -40,9 +40,9 @@ class Blockchain:
                 new_proof += 1
         return new_proof
 
+
     def hash(self, block):
         return hashlib.sha256(json.dumps(block, sort_keys=True).encode()).hexdigest()
-
 
     def is_valid_chain(self, chain):
         previous_block = chain[0]
@@ -95,6 +95,7 @@ class Blockchain:
 app = Flask(__name__)
 # Create a blockchain instance
 blockchain = Blockchain()
+
 @app.route('/mine_block', methods=['GET'])
 def mine_block():
     previous_block = blockchain.get_previous_block()
@@ -114,6 +115,7 @@ def mine_block():
     }
     return jsonify(response), 200
 
+
 # Getting full blockchain
 @app.route('/get_chain',methods=['GET'])
 def get_chain():
@@ -122,6 +124,7 @@ def get_chain():
         'length': len(blockchain.chain)
     }
     return jsonify(response), 200
+
 
 # Adding a new transaction to blockchain
 @app.route('/add_transaction', methods=['GET'])
@@ -133,3 +136,17 @@ def add_transaction():
     index = blockchain.add_transaction(json_data['sender'], json_data['receivef'], json_data['amount'])
     response = {'message': f'Transacions will be added to block {index}'}
     return jsonify(response), 201
+
+
+# If its need replace chain
+@app.route('/replace_chain', methods=['GET'])
+def replace_chain():
+    is_chain_replaced = blockchain.replace_chain()
+    if is_chain_replaced:
+        response = {'message': 'The chain replaced by the longest one.', 'new_chain': blockchain.chain}
+    else:
+        response = {'message': 'The chain is the longest one', 'actual_chain': blockchain.chain}
+    return jsonify(response), 200
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
