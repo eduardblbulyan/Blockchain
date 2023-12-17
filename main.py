@@ -1,7 +1,7 @@
 import hashlib
 import time
 import json
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from urllib.parse import urlparse
 import requests
 
@@ -95,6 +95,11 @@ class Blockchain:
 app = Flask(__name__)
 # Create a blockchain instance
 blockchain = Blockchain()
+
+
+@app.route("/",methods=['GET'])
+def index():
+    return render_template('index.html')
 
 @app.route('/mine_block', methods=['GET'])
 def mine_block():
