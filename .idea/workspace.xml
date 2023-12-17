@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b0a30a3-1c9f-4fa9-99b4-5140ea09f501" name="Changes" comment="Initial Commit" />
+    <list default="true" id="3b0a30a3-1c9f-4fa9-99b4-5140ea09f501" name="Changes" comment="Node add function">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "eduardblbulyan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="47289368-fd0b-46fa-b033-2750ac5814c1" />
+        <option name="url" value="https://github.com/eduardblbulyan/Blockchain.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
@@ -24,6 +55,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
@@ -69,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702814497389</updated>
-      <workItem from="1702814501129" duration="309000" />
+      <workItem from="1702814501129" duration="3565000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -79,7 +114,79 @@
       <option name="project" value="LOCAL" />
       <updated>1702814673264</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding imports">
+      <option name="closed" value="true" />
+      <created>1702815100634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702815100634</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creating Blockchain class">
+      <option name="closed" value="true" />
+      <created>1702815310739</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702815310739</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Define blockchain operations">
+      <option name="closed" value="true" />
+      <created>1702815548697</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702815548697</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Defining &quot;Get prev. block&quot;">
+      <option name="closed" value="true" />
+      <created>1702815790493</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702815790493</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding &quot;Proof of work&quot;">
+      <option name="closed" value="true" />
+      <created>1702816290914</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702816290914</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding &quot;Hash&quot; function">
+      <option name="closed" value="true" />
+      <created>1702816563096</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702816563096</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adding Validation test">
+      <option name="closed" value="true" />
+      <created>1702816994936</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702816994936</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add transaction">
+      <option name="closed" value="true" />
+      <created>1702817147213</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702817147213</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Node add function">
+      <option name="closed" value="true" />
+      <created>1702817261106</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702817261106</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,17 +205,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Adding imports" />
+    <MESSAGE value="Creating Blockchain class" />
+    <MESSAGE value="Define blockchain operations" />
+    <MESSAGE value="Defining &quot;Get prev. block&quot;" />
+    <MESSAGE value="Adding &quot;Proof of work&quot;" />
+    <MESSAGE value="Adding &quot;Hash&quot; function" />
+    <MESSAGE value="Adding Validation test" />
+    <MESSAGE value="Add transaction" />
+    <MESSAGE value="Node add function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Node add function" />
   </component>
 </project>
