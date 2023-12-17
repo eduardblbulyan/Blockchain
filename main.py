@@ -123,5 +123,13 @@ def get_chain():
     }
     return jsonify(response), 200
 
-
-
+# Adding a new transaction to blockchain
+@app.route('/add_transaction', methods=['GET'])
+def add_transaction():
+    json_data = request.get_json()
+    transaction_keys = ['sender', 'receiver', 'amount']
+    if not all(key in json_data for key in transaction_keys):
+        return 'Some elements of transaction is missing', 400
+    index = blockchain.add_transaction(json_data['sender'], json_data['receivef'], json_data['amount'])
+    response = {'message': f'Transacions will be added to block {index}'}
+    return jsonify(response), 201
